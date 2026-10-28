@@ -20,14 +20,14 @@ public class DAO : IDAO
 
         _products =
         [
-            new Implant("Reflex Tuner", ImplantType.NeuralProcessor, 18_000m, "Zetatech"),
+            new Implant("Reflex Tuner", ImplantType.NeuralProcessor, 8_000m, "Zetatech"),
             new Implant("Zetatech Cyberdeck", ImplantType.NeuralProcessor, 22_000m, "Zetatech"),
             new Implant("Cyberaudio Suite", ImplantType.Cyberaudio, 7_500m, "Dynalar"),
-            new Implant("Voice Synthesizer", ImplantType.Cyberaudio, 5_000m, "Dynalar"),
-            new Implant("Kiroshi Alternative Optics", ImplantType.Cyberoptics, 11_000m, "Raven Microcybernetics"),
-            new Implant("Subdermal Plating", ImplantType.SubdermalArmor, 19_500m, "Raven Microcybernetics"),
-            new Implant("Blood Pump", ImplantType.Biomonitor, 9_000m, "Biodyne"),
-            new Implant("Reinforced Tendons", ImplantType.Cyberlimb, 30_000m, "Biodyne")
+            new Implant("Voice Synthesizer", ImplantType.Cyberaudio, 4_000m, "Dynalar"),
+            new Implant("Kiroshi Alternative Optics", ImplantType.Cyberoptics, 9_800m, "Raven Microcybernetics"),
+            new Implant("Subdermal Plating", ImplantType.SubdermalArmor, 12_500m, "Raven Microcybernetics"),
+            new Implant("Blood Pump", ImplantType.Biomonitor, 4_500m, "Biodyne"),
+            new Implant("Reinforced Tendons", ImplantType.Cyberlimb, 16_000m, "Biodyne")
         ];
     }
 

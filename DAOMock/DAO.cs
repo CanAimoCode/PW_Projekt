@@ -20,14 +20,14 @@ public class DAO : IDAO
 
         _products =
         [
-            new Implant("Sandevistan", ImplantType.NeuralProcessor, 25_000m, "Arasaka"),
-            new Implant("Kerenzikov", ImplantType.NeuralProcessor, 12_000m, "Arasaka"),
-            new Implant("Mantis Blades", ImplantType.Cyberlimb, 40_000m, "Militech"),
-            new Implant("Gorilla Arms", ImplantType.Cyberlimb, 35_000m, "Militech"),
-            new Implant("Kiroshi Optics Mk.3", ImplantType.Cyberoptics, 8_000m, "Kang Tao"),
+            new Implant("Sandevistan", ImplantType.NeuralProcessor, 35_000m, "Arasaka"),
+            new Implant("Kerenzikov", ImplantType.NeuralProcessor, 9_500m, "Arasaka"),
+            new Implant("Mantis Blades", ImplantType.Cyberlimb, 28_000m, "Militech"),
+            new Implant("Gorilla Arms", ImplantType.Cyberlimb, 18_000m, "Militech"),
+            new Implant("Kiroshi Optics Mk.3", ImplantType.Cyberoptics, 14_500m, "Kang Tao"),
             new Implant("Smart Link", ImplantType.Cyberoptics, 6_500m, "Kang Tao"),
-            new Implant("Biomonitor", ImplantType.Biomonitor, 4_000m, "Biotechnica"),
-            new Implant("Subdermal Armor", ImplantType.SubdermalArmor, 15_000m, "Biotechnica")
+            new Implant("Biomonitor", ImplantType.Biomonitor, 5_000m, "Biotechnica"),
+            new Implant("Subdermal Armor", ImplantType.SubdermalArmor, 12_000m, "Biotechnica")
         ];
     }
 
