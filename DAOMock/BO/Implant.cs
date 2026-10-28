@@ -19,5 +19,5 @@ public class Implant : IProduct
     }
 
     public override string ToString() =>
-        $"{Name} [{Type}] {Price.ToString("C", CultureInfo.GetCultureInfo("en-US"))} ({ProducerName})";
+        $"{Name} [{Type}] €${Price.ToString("N2", CultureInfo.InvariantCulture)} ({ProducerName})";
 }

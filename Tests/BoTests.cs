@@ -38,11 +38,11 @@ public class BoTests
     }
 
     [Fact]
-    public void Implant_ToString_formats_price_in_us_dollars()
+    public void Implant_ToString_formats_price_in_eurodollars()
     {
         var implant = new Implant("Sandevistan", ImplantType.NeuralProcessor, 25_000m, "Arasaka");
 
-        Assert.Contains("$25,000.00", implant.ToString());
+        Assert.Contains("€$25,000.00", implant.ToString());
     }
 
     [Fact]

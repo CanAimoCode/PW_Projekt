@@ -2,7 +2,7 @@
 
 Projekt zaliczeniowy z Programowania Wizualnego (laboratoria 1–3). Temat: cyberware.
 **Producer = Korporacja**, **Product = Implant** (enum `ImplantType`).
-Ceny w dolarach (USD, format `en-US`).
+Ceny w eurodolarach (`€$`).
 
 ## Struktura
 

@@ -26,13 +26,13 @@ public class DaoMock2Tests
     }
 
     [Fact]
-    public void DAOMock2_implant_ToString_uses_us_dollars()
+    public void DAOMock2_implant_ToString_uses_eurodollars()
     {
         var implant = new DAOMock2.BO.Implant("Reflex Tuner", ImplantType.NeuralProcessor, 18_000m, "Zetatech");
 
         var text = implant.ToString();
 
-        Assert.Contains("$18,000.00", text);
+        Assert.Contains("€$18,000.00", text);
         Assert.DoesNotContain("zł", text);
     }
 
