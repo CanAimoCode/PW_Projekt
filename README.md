@@ -1,6 +1,6 @@
 # Cyberware z Cyberpunka — katalog korporacji i implantów
 
-Projekt zaliczeniowy z Programowania Wizualnego (laboratoria 1–3). Temat: cyberware.
+Projekt zaliczeniowy z Programowania Wizualnego. Temat: cyberware.
 **Producer = Korporacja**, **Product = Implant** (enum `ImplantType`).
 Ceny w eurodolarach (`€$`).
 
@@ -15,8 +15,6 @@ App/          aplikacja konsolowa + App.config
 Tests/        testy xUnit
 ```
 
-`App` nie referencjonuje bibliotek DAO w czasie kompilacji — ładuje DLL wskazane
-w `App.config` (`System.Reflection`, `Assembly.UnsafeLoadFrom`).
 
 ## Uruchomienie
 
@@ -34,20 +32,8 @@ W `App/App.config`:
 <add key="daoLibrary" value="DAOMock.dll" />
 ```
 
-Zmiana na `DAOMock2.dll` — bez rekompilacji — wystarczy w pliku `App.dll.config`
-w katalogu wyjściowym aplikacji (DLL-e obu baz są tam kopiowane przy buildzie):
-
 ```powershell
 cd App/bin/Debug/net8.0
 (Get-Content App.dll.config) -replace 'DAOMock2?\.dll', 'DAOMock2.dll' | Set-Content App.dll.config
 ./App.exe
 ```
-
-## Mapowanie na laboratoria
-
-| Laboratorium | Realizacja |
-|---|---|
-| 1 zad. 1–3, 6 | solution + biblioteki + referencje, `StartupObject`, klasy BO katalogu |
-| 2 zad. 1–9 | enum, `BO/`, `DAO`, druga baza, `Interfaces`, `IEnumerable` |
-| 3 zad. 1–5 | kolekcje generyczne, `App.config`, refleksja, `BLC`, singleton |
-| 1 zad. 4–5, 3 zad. 6 | poza zakresem projektu (ćwiczenia demonstracyjne) |
