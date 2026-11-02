@@ -24,12 +24,16 @@ dotnet build PW_Projekt.sln
 Copy-Item DAOMock/bin/Debug/net8.0/DAOMock.dll App/bin/Debug/net8.0/
 Copy-Item DAOMock2/bin/Debug/net8.0/DAOMock2.dll App/bin/Debug/net8.0/
 
+dotnet run --project App/App.csproj
+
+# albo bezpośrednio z katalogu wykonywalnego:
 cd App/bin/Debug/net8.0
 ./App.exe
 ```
 
-Uruchamiaj z katalogu z `App.exe`: nazwa `DAOMock.dll` z konfiguracji jest ścieżką
-względną, więc nie jest doklejana do katalogu aplikacji.
+Nazwa `DAOMock.dll` z konfiguracji jest ścieżką względną i nie jest doklejana do katalogu
+aplikacji. `dotnet run` startuje z katalogu wyjściowego dzięki `RunWorkingDirectory`
+w `App.csproj`; `App.exe` uruchamiaj z katalogu, w którym leży.
 
 ## Przełączanie bazy danych
 

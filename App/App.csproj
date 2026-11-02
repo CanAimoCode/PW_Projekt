@@ -15,6 +15,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <StartupObject>App.Program</StartupObject>
+    <RunWorkingDirectory>$(MSBuildProjectDirectory)\bin\$(Configuration)\$(TargetFramework)</RunWorkingDirectory>
   </PropertyGroup>
 
 </Project>
