@@ -10,19 +10,19 @@ public static class Program
         var libraryName = ConfigurationManager.AppSettings["daoLibrary"]
             ?? throw new InvalidOperationException("Brak ustawienia 'daoLibrary' w App.config.");
 
-        var blc = Blc.Instance(Path.Combine(AppContext.BaseDirectory, libraryName));
+        var blc = Blc.Instance(libraryName);
 
         Console.WriteLine($"BIBLIOTEKA: {libraryName}");
         Console.WriteLine("KORPORACJE:");
-        foreach (var producer in blc.GetAllProducers())
+        foreach (var producer in blc.Dao.GetAllProducers())
         {
             Console.WriteLine($"  {producer}");
         }
 
         Console.WriteLine("IMPLANTY:");
-        foreach (var product in blc.GetAllProducts())
+        foreach (var implant in blc.Dao.GetAllImplants())
         {
-            Console.WriteLine($"  {product}");
+            Console.WriteLine($"  {implant}");
         }
     }
 }

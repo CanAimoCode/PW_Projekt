@@ -1,6 +1,6 @@
 namespace Interfaces;
 
-public interface IProduct
+public interface IImplant
 {
     string Name { get; }
     ImplantType Type { get; }

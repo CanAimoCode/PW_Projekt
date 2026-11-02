@@ -3,18 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
     <ProjectReference Include="..\BLC\BLC.csproj" />
-    <!-- Tylko kolejność budowania — biblioteki DAO ładujemy w runtime z DLL. -->
-    <ProjectReference Include="..\DAOMock\DAOMock.csproj" ReferenceOutputAssembly="false" />
-    <ProjectReference Include="..\DAOMock2\DAOMock2.csproj" ReferenceOutputAssembly="false" />
   </ItemGroup>
-
-  <Target Name="CopyDaoLibraries" AfterTargets="Build">
-    <ItemGroup>
-      <DaoLibrary Include="..\DAOMock\bin\$(Configuration)\net8.0\DAOMock.dll" />
-      <DaoLibrary Include="..\DAOMock2\bin\$(Configuration)\net8.0\DAOMock2.dll" />
-    </ItemGroup>
-    <Copy SourceFiles="@(DaoLibrary)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
-  </Target>
 
   <ItemGroup>
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="10.0.14" />

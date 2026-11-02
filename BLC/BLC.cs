@@ -11,12 +11,9 @@ public sealed class BLC
 
     private BLC(IDAO dao) => _dao = dao;
 
-    // Bez blokady dwie sesje równolegle mogą utworzyć dwie instancje (lab. 3 zad. 5).
     public static BLC Instance(string daoLibraryPath) => _instance ??= new BLC(LoadDao(daoLibraryPath));
 
-    public IEnumerable<IProducer> GetAllProducers() => _dao.GetAllProducers();
-
-    public IEnumerable<IProduct> GetAllProducts() => _dao.GetAllProducts();
+    public IDAO Dao => _dao;
 
     public static IDAO LoadDao(string daoLibraryPath)
     {

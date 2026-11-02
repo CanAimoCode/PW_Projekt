@@ -3,7 +3,7 @@ using Interfaces;
 
 namespace DAOMock2.BO;
 
-public class Implant : IProduct
+public class Implant : IImplant
 {
     public string Name { get; }
     public ImplantType Type { get; }

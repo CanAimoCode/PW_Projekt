@@ -6,7 +6,7 @@ namespace DAOMock;
 public class DAO : IDAO
 {
     private readonly List<Producer> _producers;
-    private readonly List<Implant> _products;
+    private readonly List<Implant> _implants;
 
     public DAO()
     {
@@ -18,7 +18,7 @@ public class DAO : IDAO
             new Producer("Biotechnica", "Rzym", 120_000)
         ];
 
-        _products =
+        _implants =
         [
             new Implant("Sandevistan", ImplantType.NeuralProcessor, 35_000m, "Arasaka"),
             new Implant("Kerenzikov", ImplantType.NeuralProcessor, 9_500m, "Arasaka"),
@@ -33,5 +33,5 @@ public class DAO : IDAO
 
     public IEnumerable<IProducer> GetAllProducers() => _producers;
 
-    public IEnumerable<IProduct> GetAllProducts() => _products;
+    public IEnumerable<IImplant> GetAllImplants() => _implants;
 }
